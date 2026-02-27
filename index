@@ -337,7 +337,13 @@
 
     <!-- Inicijuoti piktogramas -->
     <script>
-        lucide.createIcons();
+        window.addEventListener('load', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.error("Lucide piktogramos nebuvo įkeltos.");
+            }
+        });
     </script>
 </body>
 </html>
